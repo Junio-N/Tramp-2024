@@ -14,10 +14,11 @@ void main () {
     char nome[30] = "joao";                         //(Criando vetor de caracteres para uma variável 'String' = Texto)
     printf("Nome: %s\n", nome);                     //(Imprimindo um vetor de caracteres "String")
     printf("Primeira Letra: %c\n", nome[0]);        //(Imprime o primeiro caracter do vetor que começa na posição 0)
+    
+    printf("\nDigite o valor de X: "); 
+    scanf("%d", &x);                                //(comando para leitura de dados, scannear o dado e guardar o endereço na variável x)
+    printf("O valor digitado foi: %d", x);
 
 
-
-
-
-    printf("Olá Mundo!");  
+    printf("\nOlá Mundo!");  
 }
