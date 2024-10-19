@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 /*
 Exercícios sobre os comandos básicos em C
@@ -41,27 +42,89 @@ void q5() {
 
 //6. Faça um programa que leia um número inteiro e imprima o seu
 //   antecessor e o seu sucessor.
+void q6() {
+int x, y, z;
+printf("\nDigite um número inteiro: ");
+scanf("%d", &x);
+y=x-1;
+z=x+1;
+printf("\nO antecessor e o sucessor do número digitado é: %d e %d\n", y, z);
+}
 
 //7. Faça um programa que leia o nome o endereço e o telefone de
 //   um cliente e ao final, imprima esses dados.
+void q7() {
+char nome[40];
+char end[40];
+char tel[15];
+printf("\ndigite o seu nome: ");
+scanf("%40[^\n]", nome);
+printf("\ndigite o seu endereço: ");
+scanf(" %40[^\n]", end);
+printf("\ndigite o seu número de telefone: ");
+scanf(" %15[^\n]", tel);
+printf("\nOs dados do cliente são: %s, residente em %s, com número de telefone %s", nome, end, tel);    
+}
 
 //8. Faça um programa que leia dois números inteiros e imprima a
 //   subtração deles.
+void q8() {
+ int x, y, z;
+ printf("Digite um número inteiro: ");
+ scanf("%d", &x);
+ printf("Digite outro número inteiro: ");
+ scanf("%d", &y);
+ z = x-y;
+ printf("\nA subtração entre o primeiro e o segundo número é: %d", z);
+}
 
-//9. Faça um programa que leia umnúmero real e imprima ¼ deste número.
+//9. Faça um programa que leia um número real e imprima ¼ deste número.
+void q9() {
+float x, y;
+printf("Digite um número real: ");
+scanf("%f", &x);
+y= (x/4); 
+printf("\n¼(um quarto) do valor digitado é igual a: %.2f ", y); 
+}
 
 //10. Faça um programa que leia três números reais e calcule a
 //    média aritmética destes números. Ao final, o programa deve
 //    imprimir o resultado do cálculo.
+void q10() {
+float x,y,z,m; 
+printf("Digite um número real: ");
+scanf("%f", &x);
+printf("Digite um número real: ");
+scanf("%f", &y);
+printf("Digite um número real: ");
+scanf("%f", &z);
+m = (x+y+z)/3;
+printf("\nA média dos números é igual a: %.2f", m); 
+}
 
 //11. Faça um programa que leia dois números reais e calcule as
 //    quatro operações básicas entre estes dois números, adição,
 //    subtração,multiplicação e divisão. Ao final, o programa
 //    deve imprimir os resultados dos cálculos.
+void q11() {
+float a, s, m, d, x, y;    
+printf("Digite um número real: ");
+scanf("%f", &x);
+printf("Digite mais um número real: ");
+scanf("%f", &y);
+a=x+y; s=x-y; m=x*y; d=x/y;
+printf("As quatro operações básicas entre o primeiro e segundo número são: adicão=%.2f, subtração=%.2f, multiplicação=%.2f, divisão=%.2f", a,s,m,d);
+}
 
 //12. Faça um programa que leia um número real e calcule o
 //    quadrado deste número. Ao final, o programa deve
 //    imprimir o resultado do cálculo.
+void q12() {
+float x;
+printf("Digite um número real: ");
+scanf("%f", &x);
+printf("O valor do número digitado ao quadrado é: %.2f", pow(x,2));
+}
 
 //13. Faça um programa que leia o saldo de uma conta poupança e
 //    imprima o novo saldo, considerando um reajuste de 2%.
@@ -109,10 +172,6 @@ void q5() {
 //    necessário também ler o valor da cotação do dólar.
 
 int main() {
-    q1();
-    q2();
-    q3();
-    q4();
-    q5();
+    q12();
     return EXIT_SUCCESS;
 }

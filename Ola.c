@@ -18,6 +18,7 @@ void main () {
     printf("\nDigite o valor de X: "); 
     scanf("%d", &x);                                //(comando para leitura de dados, scannear o dado e guardar o endereço na variável x)
     printf("O valor digitado foi: %d", x);
+    gcc -o foo foo.c -lm                            //(forçar a inserção do math -> pow())
 
 
     printf("\nOlá Mundo!");  
