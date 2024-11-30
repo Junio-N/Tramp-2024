@@ -51,12 +51,31 @@ void questao03() {
 
 //4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
 void questao04() {
-	
+int a; 
+
+printf("Digite um número: ");
+scanf("%d", &a);
+if (a % 5 == 0) {
+	printf("O número digitado é divisível por 5.");
+}
+else {
+	printf("o número não é divisível por 5.");
+}
 }
 
 //5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
 void questao05() {
+ int a; 
 
+ printf("Digite um número: ");
+ scanf("%d", &a); 
+
+ if (a % 3 == 0 && a % 7 == 0) {
+	printf("Esse número digitado é divisível por 3 e 7.");
+ }
+ else {
+	printf("Esse número não é divisível por 3 e 7.");
+ }
 }
 
 //6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
@@ -64,38 +83,118 @@ void questao05() {
 //bruto. Faça um programa em linguagem C que permita entrar com o salário bruto e o
 //valor da prestação e informar se o empréstimo pode ou não ser concedido.
 void questao06() {
+float sal, cred;
 
+printf("Digite o valor bruto do seu salário: ");
+scanf("%f", &sal);
+printf("Digite qual o valor do crédito desejado: ");
+scanf("%f", &cred);
+
+
+if (cred > (sal*0.30)) {
+	printf("O valor do crédito excede 30 por cento do salário, portanto, não será permitido o empréstimo!!"); 
+} 
+else {
+	printf("Parabéns!! Você poderá retirar o crédito desejado");
+}
 }
 
 //7. Faça um programa que leia um número e indique se o número está compreendido
 //entre 20 e 50 ou não.
 void questao07() {
+float x;
+
+printf("Digite um número: ");
+scanf("%f", &x);
+if (x >= 20 && x <= 50) {
+	printf("O número digitado está entre 20 e 50");
+} else {
+	printf("O número digitado não está no intervalo de 30 e 50\n");
+}
 
 }
 
 //8. Faça um programa que leia um número e imprima uma das mensagens: 
 //"Maior do que 20", "Igual a 20"ou "Menor do que 20".
 void questao08() {
-	
-}
+float x;
 
-//9. Faça um programa que permita entrar com o ano de nascimento da pessoa e como ano
+printf("digite um número: ");
+scanf("%f", &x);
+if(x < 20){
+	printf("O número Digitado é menor que 20");
+    }else{
+    if(x == 20){
+	printf("O número Digitado é igual a 20");
+	   }else{
+		if(x > 20){
+	    printf("O número Digitado é maior que 20");
+		}
+} 
+}
+}
+//9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o ano
 //atual. O programa deve imprimir a idade da pessoa. Não se esqueça de verificar se o
 //ano de nascimento informado é válido.
 void questao09() {
-	
+int ano,idade;
+
+printf("Digite seu ano de nascimento: ");
+scanf("%d", &ano);
+
+if(ano >= 1900 && ano <= 2024){
+		idade= 2024-ano;
+	 printf("A sua idade é %d anos!\n", idade);
+	   }else{
+		printf("Ano inválido!!\n");
+	   }
 }
 
 //10. Faça um programa que leia três números inteiros e imprima os três em ordem
 //crescente.
 void questao10() {
+int a,b,c;
 
+printf("Digite 3 números inteiros: ");
+scanf("%d %d %d", &a, &b, &c);
+
+if (a > c) {
+        int tmp = c;
+        c = a;
+        a = tmp;
+    }
+    if (a > b) {
+        int tmp = b;
+        b = a;
+        a = tmp;
+    }
+    if (b > c) {
+        int tmp = c;
+        c = b;
+        b = tmp;
+    }
+    printf("a ordem crescente dos números é: %d %d %d\n", a, b, c);
 }
+
 
 //11. Faça um programa que leia 3 números e imprima o maior deles.
 void questao11() {
-	
-}
+	int a,b,c, mr;
+
+	printf("Digite 3 números: ");
+	scanf("%d %d %d", &a,&b,&c);
+
+    if (a > b && a > c){
+		mr = a;
+	}
+	if(b > a && b > c) {
+		mr = b;
+	} else {
+        mr = c;  
+	}
+	printf("O maior dos números é: %d", mr);
+	}
+
 
 //12. Faça um programa que leia a idade de uma pessoa e informe:
 //• Se é maior de idade
