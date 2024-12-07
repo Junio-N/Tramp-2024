@@ -201,14 +201,52 @@ void questao11() {
 //• Se é menor de idade
 //• Se é maior de 65 anos
 void questao12() {
-	
+int a;
+
+printf("Digite a sua idade: ");
+scanf("%d", &a);
+
+if(a < 18) {
+	printf("Você é menor de idade!\n");
+} else {
+	if(a >= 18 && a <= 65){
+		printf("Você é maior de idade!\n");
+		} else {	
+		 if(a > 65){
+			printf("Você é maior de 65 anos!\n");
+		 }
+	}
+}
 }
 
 //13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota da
-//prova 2 de umaluno. O programa deve imprimir o nome, a nota da prova 1, a nota da prova 2, a média das notas e uma das mensagens: "Aprovado", "Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
+//prova 2 de um aluno. 
+//O programa deve imprimir o nome, a nota da prova 1, a nota da prova 2, a média das notas e uma das mensagens: "Aprovado"
+// "Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
 void questao13() {
-	
-}
+	char nome[40];
+	float p1,p2,med;
+
+   printf("\nDigite o seu nome: ");
+   scanf(" %40[^\n]", nome);
+   printf("\nDigite a nota da sua p1: ");
+   scanf(" %f", &p1);
+   printf("\nDigite a nota da sua p2: ");
+   scanf(" %f", &p2);
+
+   med = (p1+p2)/2;
+
+   if (med < 3) {
+	printf("Você está aprovado! %s", nome);
+   } else {
+	if (med >= 3 && med < 7)
+	printf("Você está de prova final! %s", nome);}
+	if (med >= 7) {
+		printf("Você está aprovado! %s", nome);
+	}
+   }
+
+
 
 //14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
 //desconto do INSS segundo a tabela seguir:
@@ -218,14 +256,44 @@ void questao13() {
 //Maior que R$1200,00 e menor ou igual a R$2000,00 25%
 //Maior que R$2000,00 30%
 void questao14() {
-	
-}
+	float sal; 
 
-//15. Um comerciante comprou umproduto e quer vendê-lo com umlucro de 45% se o valor
+	printf("Digite o valor do seu salário: ");
+	scanf(" %f", &sal);
+     
+	if (sal <= 600) {
+    printf("Você está isento de desconto, portanto, salário é: %.2f", sal);
+	}else{
+	if (sal > 600 && sal <= 1200){
+     sal = sal-0.2*sal;
+	 printf("O valor do seu salário com desconto é: %.2f", sal);
+		}else{
+			if (sal > 1200 && sal <= 2000){
+			sal = sal-0.25*sal;
+			printf("O valor do seu salário com desconto é: %.2f", sal);
+		}else{
+			sal = sal-0.3*sal;
+			printf("O valor do seu salário com desconto é: %.2f", sal);
+		}
+	}
+}
+}
+//15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o valor
 //da compra for menor que R$20,00, caso contrário, o lucro será de 30%. Faça um programa que leia o valor do produto e imprima o valor da venda.
 void questao15() {
-	
-}
+	float v;
+
+	printf("Digite o valor do produto: ");
+	scanf(" %f", &v);
+
+	if (v < 20){
+		v=v*1.45;
+		printf("O Valor do produto com o lucro de 45 por cento, será: %.2f", v);
+	}else{
+		v=v*1.30;
+		printf("O valor do produto com lucro de 30 por cento, será: %.2f", v);
+	}
+	}
 
 //16. A confederação brasileira de natação irá promover eliminatórias para o próximo
 //mundial. Faça um programa que receba a idade de um nadador e imprima a sua categoria segundo a tabela a seguir:
@@ -236,7 +304,24 @@ void questao15() {
 //Juvenil B 14 - 17 anos
 //Sênior maiores de 18 anos
 void questao16() {
-	
+	int idade; 
+
+	printf("Digite sua idade: ");
+	scanf(" %d", idade);
+
+	if (idade >= 5 && idade <= 7){
+		printf("categoria Infantil A!");
+	} else {
+		if (idade >= 8 && idade <= 10){
+		printf("categoria Infantil B!");}
+		 else {
+		if (idade >= 11 && idade <= 13){
+		printf("categoria Juvenil A!");
+	} else {
+		if (idade >= 14 && idade <= 17){
+		printf("categoria Juvenil B!");
+	}} else {
+		printf("categoria Sênior!");
 }
 
 //17. Depois da liberação do governo para as mensalidades dos planos de saúde, as pessoas começaram a fazer pesquisas para descobrir um bom plano, não muito caro. Umvendedor de um plano de saúde apresentou a tabela a seguir. Faça um programa que entre com o nome e a idade de uma pessoa e imprima o nome e o valor que ela deverá pagar.
