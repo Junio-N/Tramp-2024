@@ -6,6 +6,26 @@ EXERCÍCIOS DO CAPÍTULO 3
 #include <stdlib.h>
 #include <math.h>
 
+char nums[10] = ['0','1','2','3','4','5','6','7','8','9'];
+int is_integer(char[] valor) {
+	int length = sizeof(valor) / sizeof(valor[0]);
+	int achoutotal = 0;
+	for(int c = 0; c < length; c++) {
+		int achou = 0;
+		for(int d = 0; d < 10; d++){ 
+			if (valor[c] == nums[d]) {
+				achou = 1;
+			}
+		}
+		if (achou == 0) {
+			achoutotal = -1
+			return achoutotal;
+		} 
+	}
+	return 1;
+}
+
+
 void exemploPara() {
 	for (int cont = 1; cont <= 10; cont++) {
 		printf("Olá pela %d vez\n", cont);
@@ -89,6 +109,20 @@ void Ex4() {
 //5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
 //sucessivas, crie um programa que calcule o produto de dois números inteiros
 //lidos. Suponha que os números lidos sejam positivos.
+void Ex2() {
+int num1,num2;
+char input[4]; 
+
+
+printf("Digite um número inteiro: ");
+scanf("%s", &input);
+
+
+printf("Digite mais um número inteiro: ");
+scanf("%s", &input);
+
+ if() 
+
 
 //6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
 //Observação: os dois primeiros termos desta série são 1 e 1 e os demais são gerados
