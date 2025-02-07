@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
+//link dos github https://github.com/ifmt-cba/lingprog20242. 
 /*
 Exercícios sobre os comandos básicos em C
 */
